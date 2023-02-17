@@ -16,5 +16,10 @@ namespace UserMangmentSystem.Controler
         {
             return _employee.GetById(1).Name;
         }
+        public ViewResult Details()
+        {
+            var model = _employee.GetById(1);
+            return View(model);
+        }
     }
 }
